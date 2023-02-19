@@ -4,9 +4,12 @@ const dbConnection = async () => {
 
     try {
         
-        await mongoose.connect( process.env.MONGODB_CNN, {
+        await mongoose.connect( 'mongodb+srv://macubi90:TmEHu5hP7ANZmJAm@miclustercafe.ex7ag5u.mongodb.net/cafeDB', {
             useNewUrlParser: true,
-            useUnifiedTopology: true
+            useUnifiedTopology: true,
+            autoIndex: false,
+
+
         });
 
         console.log('Base de datos online');
