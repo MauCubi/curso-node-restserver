@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const dbConnection = async () => {
 
     try {
-        
-        await mongoose.connect( 'mongodb+srv://macubi90:TmEHu5hP7ANZmJAm@miclustercafe.ex7ag5u.mongodb.net/cafeDB', {
+        mongoose.set("strictQuery", false);
+        await mongoose.connect( process.env.MONGODB_CNN, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             autoIndex: false,
-
+            
 
         });
 
